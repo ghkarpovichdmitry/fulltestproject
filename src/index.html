@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webpack Template</title>
+</head>
+<body>
+
+  <!-- main wrapper -->
+  <div class="wrapper">
+    <!-- #app wrapper for vue -->
+    <div id="app">
+
+      <header></header>
+
+      <!-- only content wrapper -->
+      <div class="content-wrapper">
+
+        <!--  section -->
+        <section id="main">
+          <div class="container">
+            <div class="widget">
+              <div class="widget__head">
+                <h1>Выбор элементов</h1>
+                <p class="widget__info">На данный момент у вас выбрано <span class="widget__number">2</span> элемента:</p>
+                <ul class="widget__selected-items"></ul>
+                <button class="widget__head-change-button active">Изменить мой выбор</button>
+              </div>
+
+              <div class="widget__body">
+                <div class="widget__filter">
+                  <div class="widget__filter-head">
+                    <p>Диалог выбора элементов:</p>
+                    <div class="widget__filter-options">
+                      <div class="widget__filter-search">
+                        <span>Поиск</span>
+                        <input type="text">
+                      </div>
+
+                      <div class="widget__filter-select">
+                        <span>Фильтр</span>
+                        <span class="widget__filter-select-box">
+                          <select name="" id="">
+                            <option value="0" selected>Без фильтра</option>
+                            <option value="10">Номер > 10</option>
+                            <option value="100">Номер > 100</option>
+                            <option value="200">Номер > 200</option>
+                          </select>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="widget__filter-body">
+                    <ul class="widget__filter-list"></ul>
+                  </div>
+
+                  <div class="widget__filter-footer">
+                    <p>Выбранные элементы на данный момент:</p>
+                    <ul id="widget__footer-selected-items" class="widget__footer-selected-items"></ul>
+                    <div class="widget__filter-footer-buttons">
+                      <button class="widget__filter-footer-button save-choice-button">Сохранить</button>
+                      <button class="widget__filter-footer-button cancel-choice-button">Отмена</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>         
+          </div>
+        </section>
+
+        <!-- component -->
+        <!-- <example-component v-if="showExampleComponent"></example-component> -->
+      </div> <!-- end content wrapper --> 
+    </div> <!-- end #app wrapper -->
+  </div> <!-- end main wrapper -->
+</body>
+</html>
