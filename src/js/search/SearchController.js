@@ -1,6 +1,7 @@
 import SearchView from './SearchView';
 
-export default class SearchController {
+export default class
+SearchController {
   constructor (controller) {
     this.mainController = controller;
     this.view = new SearchView(this);

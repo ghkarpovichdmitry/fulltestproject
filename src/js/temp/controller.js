@@ -70,7 +70,7 @@ class Controller {
       if (n < max) {
         arr[index]['active'] = true;
       } else {
-        console.log('can not select-element items');
+        console.log('can not select items');
         return false; // or through error ?
       }
     }
@@ -265,7 +265,7 @@ export default Controller;
 //     this.model.arrayOfObjects[i]['active'] = 'false';
 //   } else {
 //     if (n === max) {
-//       console.log('can not select-element items');
+//       console.log('can not select items');
 //     } else if (n < max) {
 //       this.model.arrayOfObjects[i]['active'] = 'true';
 //     }
@@ -338,7 +338,7 @@ export default Controller;
 // }
 
 // if (n === max) {
-//   console.log('can not select-element items');
+//   console.log('can not select items');
 //   return false; // or through error ?
 // } else if (n < max) {
 //   arr[index]['active'] = true;

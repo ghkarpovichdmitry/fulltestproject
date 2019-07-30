@@ -3,14 +3,9 @@ export default class AbstractController {
     this.controller = controller;
   }
 
-  setSelectors () {
-  }
-
-  setEvents () {
-  }
-
   init () {
-    this.setSelectors();
-    this.setEvents();
+    // this.view.init();
+    // this.setSelectors();
+    // this.setEvents();
   }
 }

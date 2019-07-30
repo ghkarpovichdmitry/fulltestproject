@@ -7,8 +7,8 @@ class View {
     this.buttonSaveChoice = document.querySelector('.save-choice-button');
     this.buttonCancelChoiсe = document.querySelector('.cancel-choice-button');
     this.containerSavedList = document.querySelector('.widget__selected-items');
-    this.searchField = document.querySelector('.widget__filter-search-element input');
-    this.selectFilter = document.querySelector('.widget__filter-select-element select-element');
+    this.searchField = document.querySelector('.widget__filter-search input');
+    this.selectFilter = document.querySelector('.widget__filter-select select');
   }
 
   changeChoice () {

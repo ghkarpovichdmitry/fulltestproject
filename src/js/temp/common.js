@@ -14,8 +14,8 @@ let buttonChangeChoice  = document.querySelector('.widget__head-change-button'),
   saveChoiceButton = document.querySelector('.save-choice-button'),
   cancelChoiceButton = document.querySelector('.cancel-choice-button'),
   destinationElement = document.querySelector('#widget__footer-selected-items'),
-  searchField = document.querySelector('.widget__filter-search-element input'),
-  selectFilter = document.querySelector('.widget__filter-select-element-box select-element'),
+  searchField = document.querySelector('.widget__filter-search input'),
+  selectFilter = document.querySelector('.widget__filter-select-box select'),
   itemsArray = initialData;
 
 // 1) По клику на "Изменить мой выбор" открывать диалог окно с возможностью выбора элементов
