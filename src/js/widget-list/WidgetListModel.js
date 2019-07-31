@@ -1,15 +1,20 @@
 export default class WidgetListModel {
   constructor (controller) {
     this.listController = controller;
+    this.data = null;
   }
 
-  getItemsArray (array) {
+  setData (obj) {
+    this.data = obj;
+  }
+
+  getItemsArray (array) { // 7)
     let i = 0;
     let len = array.length;
     let arrayLiItems = [];
 
     for (i; i < len; i++) {
-      let it = this.listController.renderElement(array[i], i);
+      let it = this.listController.renderElement(array[i], i); // 8)
       arrayLiItems.push(it);
     }
     return arrayLiItems;
@@ -25,5 +30,6 @@ export default class WidgetListModel {
   init () {
     this.setSelectors();
     this.setEvents();
+    this.listController.getInitialDataToModel();
   }
 }

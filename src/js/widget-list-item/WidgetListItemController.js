@@ -8,7 +8,7 @@ export default class WidgetListItemController {
     this.model = new WidgetListItemModel(this);
   }
 
-  renderElement (obj, index) {
+  renderElement (obj, index) { // 10)
     return this.view.renderElement(obj, index);
   }
 

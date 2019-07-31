@@ -10,16 +10,25 @@ export default class WidgetListController {
     this.listItemController = new WidgetListItemController(this);
   }
 
-  renderElement (obj, index) {
+  renderElement (obj, index) { // 9)
     return this.listItemController.renderElement(obj, index);
   }
 
-  getItemsArray (array) {
+  getItemsArray (array) { // 6)
     return this.model.getItemsArray(array);
   }
 
-  renderWidgetItems (array) {
-    this.view.renderWidgetItems(array);
+  getInitialDataToModel () {
+    let arrayOfObjects = this.mainController.getInitialData();
+    this.model.setData(arrayOfObjects);
+  }
+
+  renderWidgetItems () { // 4)
+    // this.getInitialDataToListController();
+    let arrayOfObjects = this.mainController.getInitialData();
+    this.view.renderListItems(arrayOfObjects);
+
+    // тут запуск рендера
     // const childArray = this.model.getItemsArray(array);
     // const parent = this.view.widgetList;
     // parent.appendChild(childArray); // ???????????
@@ -27,6 +36,7 @@ export default class WidgetListController {
   }
 
   init () {
-    this.view.init();
+    this.view.init(); // 2)
+    this.model.init();
   }
 }

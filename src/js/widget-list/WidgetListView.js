@@ -1,6 +1,6 @@
 export default class WidgetListView {
   constructor (controller) {
-    this.controller = controller;
+    this.listController = controller;
   }
 
   // render (initalData) {
@@ -12,12 +12,12 @@ export default class WidgetListView {
   //   this.controller.onFilterChanged(selectValue);
   // }
 
-  renderWidgetItems (array) {
-    const itemsArray = this.controller.getItemsArray(array);
-    this.fillDomElementFromArray(itemsArray, this.widgetList);
+  renderListItems (array) { // 5)
+    const itemsArray = this.listController.getItemsArray(array);
+    this.fillDomElementFromArray(itemsArray, this.widgetList); // 11)
   }
 
-  fillDomElementFromArray (array, domElement) { // have to be abstract ?
+  fillDomElementFromArray (array, domElement) { // have to be abstract ?  12)
     domElement.innerHTML = array.join('');
   }
 
@@ -43,5 +43,6 @@ export default class WidgetListView {
   init () {
     this.setSelectors();
     this.setEvents();
+    this.listController.renderWidgetItems(); // 3)
   }
 }

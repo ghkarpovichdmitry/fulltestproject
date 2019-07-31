@@ -10,13 +10,17 @@ export default class Widget {
     this.selectController = new SelectController(this);
     this.searchController = new SearchController(this);
     this.listController = new WidgetListController(this);
-    this.listItemController = new WidgetListItemController(this);
     this.model = new WidgetModel(this, data);
+    this.listItemController = new WidgetListItemController(this);
     this.view = new WidgetView(this);
   }
 
   renderWidgetList (arr) {
     this.listController.renderWidgetItems(arr);
+  }
+
+  getInitialData () {
+    return this.model.initialDataObjects;
   }
 
   // disableItemsActivationPossibility () {
@@ -71,7 +75,7 @@ export default class Widget {
   init () {
     this.view.init();
     this.model.init();
-    this.listController.init();
-    this.renderWidgetList(this.model.initialDataObjects);
+    this.listController.init(); // 1)
+    // this.renderWidgetList(this.model.initialDataObjects);
   }
 }

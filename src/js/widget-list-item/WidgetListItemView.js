@@ -6,7 +6,7 @@ export default class WidgetListItemView {
     this.listTemplate = new WidgetTemplates();
   }
 
-  renderElement (obj, index) {
+  renderElement (obj, index) { // 11)
     return this.listTemplate.getListTemplate(obj, index);
   }
 
